@@ -1,4 +1,4 @@
-package org.hero.servlet;
+package hero.servlet;
 
 /**
  * Servlet规范之响应规范

@@ -1,4 +1,4 @@
-package org.hero.servlet;
+package hero.servlet;
 
 import java.util.List;
 import java.util.Map;

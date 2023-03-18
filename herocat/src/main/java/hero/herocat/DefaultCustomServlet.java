@@ -1,8 +1,8 @@
-package org.hero.herocat;
+package hero.herocat;
 
-import org.hero.servlet.HeroRequest;
-import org.hero.servlet.HeroResponse;
-import org.hero.servlet.HeroServlet;
+import hero.servlet.HeroResponse;
+import hero.servlet.HeroRequest;
+import hero.servlet.HeroServlet;
 
 /**
  * TODO
@@ -13,11 +13,12 @@ import org.hero.servlet.HeroServlet;
 public class DefaultCustomServlet extends HeroServlet {
     @Override
     public void doGet(HeroRequest request, HeroResponse response) throws Exception {
-
+        String uri = request.getUri();
+        response.write("404 - no this servlet : " + (uri.contains("?")?uri.substring(0,uri.lastIndexOf("?")):uri));
     }
 
     @Override
     public void doPost(HeroRequest request, HeroResponse response) throws Exception {
-
+        doGet(request, response);
     }
 }
